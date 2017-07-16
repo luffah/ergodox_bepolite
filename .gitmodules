@@ -1,6 +1,6 @@
 [submodule "qmk_firmware"]
-  path = qmk_firmware
-  url = https://github.com/qmk/qmk_firmware
-[submodule "lib/chibios-contrib"]
-	path = teensy_loader_cli 
-  url = https://github.com/PaulStoffregen/teensy_loader_cli
+	path = qmk_firmware
+	url = https://github.com/qmk/qmk_firmware
+[submodule "teensy_loader_cli"]
+	path = teensy_loader_cli
+	url = https://github.com/PaulStoffregen/teensy_loader_cli
