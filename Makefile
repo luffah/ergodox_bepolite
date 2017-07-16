@@ -3,8 +3,10 @@ make_bepolite:
 	cp -ruT bepolite qmk_firmware/keyboards/ergodox/ez/keymaps/bepolite && \
 	 	cd qmk_firmware/ && make ergodox-ez-bepolite
 
+make_loader:
+	cd teensy_loader_cli && make
 
-transfer: make_bepolite
+transfer: make_loader make_bepolite
 	sudo echo "Press on reset (4 seconds)" 
 	sleep 4
 	echo "Transfer begin"

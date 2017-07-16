@@ -134,8 +134,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  KC_LSHIFT , BP_A_GRAVE , BP_Y       , BP_X    , BP_DOT    , BP_K       , KC_TAB       ,
  KC_LCTL   , BP_PERCENT , BP_DOLLAR  ,KC_LEFT    , KC_RIGHT , 
           KC_UP    ,  KC_CAPSLOCK ,
-          LT(FL,KC_ESC) , ALT_T(KC_DOWN), GUI_T(KC_MENU),
-  CTL_T(KC_SPC)  , ALT_T(KC_INS), GUI_T(KC_DEL),
+    LT(FL,KC_ESC) , ALT_T(KC_DOWN), GUI_T(KC_MENU),
+    ALT_T(KC_INS),CTL_T(KC_SPC)  , GUI_T(KC_DEL),
  // right hand
  BP_PERCENT             , KC_6    , KC_7   , KC_8    , KC_9    , KC_0 , KC_MINS        ,
  KC_BSPC                , KC_Y    , BP_V   , BP_D    , BP_L    , BP_J , BP_Z           ,
