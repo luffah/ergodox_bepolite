@@ -29,7 +29,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                      || Functions : Contain all is needed with F1-12   ||
  *                      ||             keys                               ||
  *                      ||                                                ||
- *                      ||                                                ||
+ *                      || ChangeLog :
+ *                      ||  hjkl key on lower row removed                 ||
+ *                      ||                            due to pinky injury ||
  *                      ||________________________________________________||
  *                      '--------------------------------------------------'
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -37,8 +39,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *
  * Sft Spce BSpc Ent = Shift Space BackSpace Enter
  *
- * ->| = tab     |<- = Shift-Tab
- * 
  * The keys can be associated to one character (typing) and one {modifier} (pressing).
  * This is the case for the keys :  Ç { Shift };  Up { Control }; LeftSpace {Shift}; RightSpace {AltGr}
  *
@@ -52,52 +52,37 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,------.----.----.----.----.----.-----.    Layout   ,----.----.----.----.----.----.------.  |
  * ¦   $  ¦ "  ¦  « ¦ »  ¦ (  ¦ )   ¦ Caps¦            ¦ %  ¦ @  ¦ +  ¦ -  ¦ /  ¦ *  ¦ =    ¦  |
  * ¦      ¦    ¦    ¦    ¦    ¦-[:]-¦  Alt¦            ¦ Alt¦    ¦    ¦    ¦    ¦    ¦      ¦  |
- * ..ESC....F1...F2...F3...F4...Calc.     |            |    :NumL:    |    |    |    |      |  |
+ * ..ESC....F1...F2...F3...F4...Calc.     |            |    |    |    |    |    |    |      |  |
  * \------\----\----\----\----\-----\-----¦            .----/----/----/----/----/----/------/  |
- * ¦ ->|  ¦ B  ¦ É  ¦ P  ¦ O  ¦ È   ¦ |<- ¦            ¦BSpc¦ ^  ¦ V  ¦ D  ¦ L  ¦ J  ¦ Z    ¦  |
+ * ¦ Tab  ¦ B  ¦ É  ¦ P  ¦ O  ¦ È   ¦  ↑  ¦            ¦BSpc¦ ^  ¦ V  ¦ D  ¦ L  ¦ J  ¦ Z    ¦  |
  * |      |    |    |    |    |     |     |            ¦    |    |    |    |    |    |      ¦  |
  * .wwBack..F5...F6...F7...F8...Prev..Vol+.            |    ¦    .A.F1.A.F2.A.F3.A.F4.Alt.F5¦  |
  * ¦      ¦    ¦    ¦    ¦    ¦     ¦     ¦            ¦    : 6 :: 7 :: 8 :: 9 :: 0 ::: ( :::  |
  * \------\----\----\----\----\-----¦     ¦            ¦    ¦----/----/----/----/----/------/  |
  * ¦  W   ¦ A  ¦ U  ¦ I  ¦ E  ¦ ,   ¦-----'            '____¦ C  ¦ T  ¦ S  ¦ R  ¦ N  ¦ M    ¦  |
- * ¦      ¦    ¦    ¦    ¦    ¦     ¦                       ¦-[#]¦-[.]¦Ctrl¦ Alt¦ Gui¦   Sft¦  |
+ * ¦      ¦    ¦    ¦    ¦    ¦     ¦                       ¦    ¦    ¦    ¦    ¦           ¦  |
  * |      |    |    |    |    |     |                       |    |    |    |    |    |      |  |
  * .wwFwd...F9...F10..F11..F12..Play......              ____: 1 :: 2 :: 3 :: 4 :: 5 ::: ) :::  |
  * \------\----\----\----\----\-----¦     ¦            ¦    ¦----/----/----/----/----/------/  |
- * ¦Shift ¦ À  ¦ Y  ¦ X  ¦ .  ¦  K  ¦ ->| ¦            ¦Ent ¦ '  ¦ Q  ¦ G  ¦ H  ¦ F  ¦ Ç    ¦  |
+ * ¦Shift ¦ À  ¦ Y  ¦ X  ¦ .  ¦  K  ¦  ↓  ¦            ¦Ent ¦ '  ¦ Q  ¦ G  ¦ H  ¦ F  ¦ Ç    ¦  |
  * ¦      ¦    ¦    ¦    ¦    ¦     ¦     ¦            ¦    ¦    ¦    ¦    ¦    ¦    ¦   Sft¦  |
  * ¦      ¦    ¦    ¦    ¦    ¦     ¦     ¦            ¦    : [ :: ] :: { :: } :: \ ::: . :::  |
  * ¦      ¦    ¦    ¦    ¦    ..Next..Vol-.            ¦    ¦    ¦    ¦    ¦    ¦    ¦      ¦  |
  * \------\----\----\----\----\-----\-----'            '----/----/----/----/----/----/------/  |
- *   ¦    ¦App |Home|End ¦Esc ¦                                  ¦ ←  ¦  ↓ ¦  ↑  | →  ¦Ins ¦   |
- *   ¦Ctrl¦-[:]¦Ctrl¦ Gui¦ Alt¦   ______.____.   .____._____.    ¦    ¦    ¦     |    ¦Ctrl¦   |
- *   \----\----\----\----\----\ /MSLft/MSRgt/\ /\ PgUp \ Del \   /----/----/----/----/----/    |
+ *   ¦    ¦App |Home|End ¦Spc ¦                                  ¦ Esc¦  ← ¦  →  | Esc¦Ins ¦   |
+ *   ¦Ctrl¦-[:]¦Ctrl¦ Gui¦ Alt¦   ______.____.   .____._____.    ¦Ctrl¦ Sft¦     |    ¦Ctrl¦   |
+ *   \----\----\----\----\----\ / Esc /MSRgt/\ /\ PgUp \ Del \   /----/----/----/----/----/    |
  *                    _________/_____/_____/     \_____\_____\__________ 
- *                  / Space   / Esc /     /\     /\ PgDn\ BSpc \Space   \
- *                 / Shift   /-[.]-/MsUP /         \     \ Ctrl\  AlGr   \
+ *                  / Space   /     /     /\     /\ PgDn\ BSpc \Space   \
+ *                 / Shift   /MSLft/MsUP /         \     \ Ctrl\  AlGr   \
  *                /_________/_____/_____/           \_____\_____\_________\
  *                    /  ←  /  →  /     /\   /   \   /\ Ins \  ↑  \ ↓   \
- *                   /Shift/ Alt /MsDN /    /     \    \     \ Ctrl\ AlGr\
+ *                   /     /     /MsDN /    /     \    \     \ Ctrl\ AlGr\
  *                  /_____/_____/_____/    /       \    \_____\_____\_____\
  *                  \     \     \     \   /         \   /     /     /     /
  *                                       /           \
  *                  --------------------'             '------------------------'
  *                     ----------------- \             / ---------------------/
- *   BACKSPACE   D __    L                      DOWN
- *   ENTER  T  __ |  |.--.  N             Left   __     UP
- *            |  ||  ||  |.-.              .--. \  \ .--.
- *            |  ||  ||  || |               \  \ \  \ \  \  .-. RIGHT
- *  SPACE   _ |  ||  ||  || |    BackSpace   \  \ |  | )  ) ) )       INS
- *   DOWN  | \|  ''  ''  '' |       SPACE _   \  \|  |/  / / /
- *   UP    |  |  ''  ''  '' |       DOWN | \   |            |
- *   INS   |  |             |       UP   |  \  |            |
- *         |                |             \  \ |            |
- *          \               |              \  ''            |
- *           \              |               \              /
- *            \            /                 \            /
- *        -- not using arrows --           -- using arrows  --
- *                 up
- * 
  * *
  */
 // If it accepts an argument (i.e, is a function), it doesn't need KC_.
@@ -105,51 +90,23 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [BASE] = KEYMAP_80(  // layer 0 : default
  // left hand
     BP_DOLLAR    , KC_1       , KC_2       , KC_3    , KC_4      , LT(NUM,KC_5)       , ALT_T(KC_CAPSLOCK)   ,
-    KC_TAB    , BP_B       , BP_E_ACUTE , BP_P    , BP_O      , BP_E_GRAVE , LSFT(KC_TAB),
+    KC_TAB    , BP_B       , BP_E_ACUTE , BP_P    , BP_O      , BP_E_GRAVE , KC_UP,
     BP_W     , BP_A       , BP_U     , BP_I    , BP_E      , BP_COMMA   ,
-    OSM(MOD_LSFT) , BP_A_GRAVE , BP_Y       , BP_X    , BP_DOT    , BP_K       , KC_TAB,
-    OSM(MOD_LCTL)  , LT(NUM,KC_APP), CTL_T(KC_HOME) , GUI_T(KC_END)   , ALT_T(KC_ESC) ,
-    KC_MS_LEFT   , KC_MS_RIGHT,
-   SFT_T(KC_SPC) ,KC_ESC, KC_MS_UP,
-    SFT_T(KC_LEFT),ALT_T(KC_RIGHT)  , KC_MS_DOWN,
-/*    KC_MS_LEFT   , KC_MS_RIGHT,*/
-/*   SFT_T(KC_SPC) ,LT(FL,KC_ESC), KC_MS_UP,*/
-/*    SFT_T(KC_SPC),SFT_T(KC_LEFT),ALT_T(KC_RIGHT)  , */
+    OSM(MOD_LSFT) , BP_A_GRAVE , BP_Y       , BP_X    , BP_DOT    , BP_K       , KC_DOWN,
+    OSM(MOD_LCTL)  , LT(NUM,KC_APP), CTL_T(KC_HOME) , GUI_T(KC_END)   , ALT_T(KC_SPC) ,
+      LT(FL,KC_ESC), KC_MS_UP,
+     KC_SPC , KC_MS_LEFT, KC_MS_RIGHT,
+    KC_LEFT,KC_RIGHT  , KC_MS_DOWN,
    // riht hand
   ALT_T(BP_PERCENT), KC_6 , KC_7 , KC_8 , KC_9 , KC_0 , KC_MINS ,
     KC_BSPC     , KC_Y , BP_V , BP_D , BP_L , BP_J , BP_Z    ,
-    LT(NUM,BP_C)         , LT(FL,BP_T)    , CTL_T(BP_S)   , ALT_T(BP_R)    , GUI_T(BP_N)    , SFT_T(BP_M) ,
+    BP_C         , BP_T    , BP_S   , BP_R    , BP_N    ,BP_M ,
     KC_ENTER      , BP_APOS       , BP_Q            , BP_G     , BP_H          , BP_F , SFT_T(BP_CCED) ,
-    KC_LEFT       , KC_DOWN       , KC_UP ,KC_RIGHT           , CTL_T(KC_INS) ,
+    CTL_T(KC_ESC)      , SFT_T(KC_LEFT)       , KC_RIGHT ,KC_ESC  , CTL_T(KC_INS) ,
     KC_PGUP      , KC_DEL     ,
-    KC_PGDN        , CTL_T(KC_BSPC) , RALT_T(KC_SPC)  ,
+    KC_PGDN       , CTL_T(KC_SPC) , RALT_T(KC_SPC)  ,
     KC_INS , CTL_T(KC_UP)  , RALT_T(KC_DOWN)
-/*    KC_PGUP      , KC_DEL     ,*/
-/*    KC_PGDN        , CTL_T(KC_INS) , RALT_T(KC_SPC)  ,*/
-/*    KC_UP , CTL_T(KC_DOWN)  , RALT_T(KC_SPC)*/
     ),
-/*experimental exchange left and right hands */
-[REVERT] = KEYMAP_80(
-   // left hand
-    KC_KP_COMMA    , KC_6            , KC_7            , KC_8          , KC_9          , KC_0        , KC_MINS        ,
-    KC_TAB        , KC_Y            , BP_V            , BP_D          , BP_L          , BP_J        , BP_Z           ,
-    BP_C ,  BP_T   , BP_S     , BP_R   , BP_N   , BP_M ,
-    KC_ENTER       , BP_APOS         , BP_Q            , BP_G          , BP_H          , BP_F        , SFT_T(BP_CCED) ,
-    OSM(MOD_LCTL)  , BP_PERCENT      , KC_        , GUI_T(KC_ESC) , OSM(MOD_LALT) ,
-    KC_        , KC_          ,
-    KC_         , KC_   , KC_  ,
-    KC_         , KC_   , KC_  ,
-   // right hand
-    BP_DOLLAR      , KC_1            , KC_2            , KC_3          , KC_4          , KC_5        , KC_CAPSLOCK    ,
-    KC_BSPC         , BP_B            , BP_E_ACUTE      , BP_P          , BP_O          , BP_E_GRAVE  , TG(REVERT)  ,
-     LT(NUM, BP_A)    , CTL_T(BP_U)     , ALT_T(BP_I)   , GUI_T(BP_E)   , BP_COMMA       ,BP_W           ,
-    OSM(MOD_LSFT)  , BP_A_GRAVE      , BP_Y            , BP_X          , BP_DOT        , BP_K        , SFT_T(KC_TAB)  ,
-    KC_LEFT        , KC_DOWN         , KC_UP           , KC_RIGHT      , CTL_T(KC_ESC) ,
-    KC_        , KC_          ,
-    KC_         , KC_   , KC_  ,
-    KC_         , KC_   , KC_  
-    ),
-
 // Funtions keys 
 [FL] = KEYMAP_80(
     // left hand
@@ -160,14 +117,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_            , KC_        , KC_      , KC_          , KC_           ,  
     //left thumb
     KC_            , KC_            ,
-    KC_            , KC_            , KC_POWER     ,
-    KC_HOME        , KC_END         , KC_          ,
+    KC_            , KC_            , KC_    ,
+    KC_HOME        , KC_END         , KC_     ,
     // right hand
     KC_          , KC_         , KC_        , KC_       , KC_       , KC_       , KC_          ,
     KC_    , KC_          , LALT(KC_F1)    , LALT(KC_F2)  , LALT(KC_F3) , LALT(KC_F4)  , LALT(KC_F5 ) ,
-    KC_       , KC_            , KC_          , KC_          ,  KC_          , TG(REVERT)    ,
-KC_  ,KC_  ,KC_  ,KC_  ,KC_  ,KC_  ,KC_  ,
-KC_  ,KC_  ,KC_  ,KC_  ,KC_  ,
+    KC_       , KC_            , KC_          , KC_          ,  KC_         , KC_    ,
+KC_  ,KC_MS_BTN1 ,KC_MS_BTN3  ,KC_MS_BTN2  , KC_MS_BTN4 , KC_MS_BTN5  ,KC_   ,
+KC_MS_WH_LEFT     , KC_MS_WH_DOWN   , KC_MS_WH_UP     ,  KC_MS_WH_RIGHT  ,KC_  ,
     // right thumb
     KC_            , KC_            ,
     KC_            , KC_            , KC_CAPSLOCK  ,
@@ -186,14 +143,16 @@ KC_  ,KC_  ,KC_  ,KC_  ,KC_  ,
     KC_            , KC_            , KC_POWER     ,
     KC_HOME        , KC_END         , KC_          ,
     // right hand
-    KC_          , KC_NUMLOCK         , KC_        , KC_       , KC_       , KC_       , KC_          ,
-KC_  ,KC_KP_6  ,KC_KP_7  ,KC_KP_8  ,KC_KP_9  ,KC_KP_0  ,KC_4  ,
-    KC_KP_1       , KC_KP_2            , KC_KP_3          , KC_KP_4          ,  KC_KP_5          , KC_5    ,
+    KC_          , KC_        , KC_        , KC_       , KC_       , KC_       , KC_          ,
+KC_  ,LSFT(KC_6)  ,LSFT(KC_7)  ,LSFT(KC_8)  ,LSFT(KC_9)  ,LSFT(KC_0)  ,KC_4  ,
+    LSFT(KC_1)       , LSFT(KC_2)            , LSFT(KC_3)          , LSFT(KC_4)          ,  LSFT(KC_5)          , KC_5    ,
 KC_  , RALT(KC_4)  ,RALT(KC_5)  , RALT(BP_Y)  , RALT(BP_X)  ,RALT(BP_A_GRAVE)  ,SFT_T(KC_KP_COMMA)  ,
 KC_  ,KC_  ,KC_  ,KC_  ,KC_  ,
     // right thumb
     KC_            , KC_            ,
-    KC_            , KC_            , KC_CAPSLOCK  ,
+    KC_            , KC_            , KC_  ,
     KC_            , KC_PGUP        , KC_PGDN
     )              ,
 };
+
+

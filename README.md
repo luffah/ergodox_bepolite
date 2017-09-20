@@ -4,17 +4,25 @@ My ergodox bepo/french/config
 ****
 Configuration de mon clavier ergodox
 ****
-Il s'agit d'un mix entre une configuration classique et des adaptions pour rendre plus accessibles :
-* les flèches (avec les pouces, ou alternativement à avec des touches type hjkl)
-* les touches fonctions et les raccourcis FreeDesktop notamment Alt+F2 Alt+F4
-* les nombres (pour un personne qui n'utise jamais de clavier numérique / numpad)
-* les touches modificatrices : shift,  ctrl , ainsi que AltGr (très utilisé dans bépo), alt et alt
+Particularités :
+* les touches fonctions et les raccourcis FreeDesktop notamment Alt+F2 Alt+F4 sont faciles d'accès
+* les touches modificatrices sont utilisables avec le pouce : Shift,  Ctrl ,  AltGr, et Alt
+* les flèches sont utilisables avec les pouces (avec alternative)
+* BEPO : meilleur accès à la touche w
+
+# Changelog
+
+20 sept 2017 . =hjkl location causes pinky injury=
+
+Les touches type hjkl sur la rangé la plus basse sont supprimés. La raison ? la présence de ces touches incite à tordre légèrement le poignet, ce qui a pour effet de placer l'auriculaire (flèche droite) dans une position crispée.
+Les effets effets négatifs sur l'articulations de l'auriculaire peut se faire ressentir en moins d'1 mois.
+
 
 # Hardware
 Require an ergodox 80keys. Warning on the 2 space thumbs keys: you'll probably need to modify the shape of the buttons.
 
-Cette disposition necessite un clavier ergodox à 80 touches.
-Les deux touches "Espace" doivent être rendu plus accessibles, soit en les déplacant, soit en y mettant des embouts plus large.
+Cette disposition nécessite un clavier ergodox à 80 touches.
+Les deux touches "Espace" doivent être rendu plus accessibles, soit en les déplaçant, soit en y mettant des embouts plus large.
 
 
 
