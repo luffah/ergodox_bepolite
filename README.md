@@ -15,8 +15,10 @@ Particularités :
 20 sept 2017 . =hjkl location causes pinky injury=
 
 Les touches type hjkl sur la rangé la plus basse sont supprimés. La raison ? la présence de ces touches incite à tordre légèrement le poignet, ce qui a pour effet de placer l'auriculaire (flèche droite) dans une position crispée.
-Les effets effets négatifs sur l'articulations de l'auriculaire peut se faire ressentir en moins d'1 mois.
+Les effets effets négatifs sur l'articulation de l'auriculaire peut se faire ressentir en moins d'1 mois.
 
+
+Depuis... abandon du projet. Il est bien plus rentable d'utiliser `xkb` pour adapter son clavier.
 
 # Hardware
 Require an ergodox 80keys. Warning on the 2 space thumbs keys: you'll probably need to modify the shape of the buttons.
